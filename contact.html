@@ -6,7 +6,7 @@
       <link rel="stylesheet" href="static/Style3.css">
         <script src="JS/main.js"></script>
     <title>Contact - César Junior</title>
-    <link rel="stylesheet" href="styles.css">
+   
 </head>
 <body>
     <header>
@@ -43,30 +43,36 @@
         <div class="form-container">
             <p class="form-intro">Si vous avez des questions ou souhaitez discuter d'une collaboration, n'hésitez pas à me contacter via le formulaire ci-dessous :</p>
             
-            <form action="#" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Nom :</label>
-                    <input type="text" id="name" name="name" required>
-                    <div class="error-message">Veuillez remplir ce champ</div>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="email" required>
-                    <div class="error-message">Veuillez entrer un email valide</div>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message :</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                    <div class="error-message">Veuillez écrire votre message</div>
-                </div>
-
-                <button type="submit" class="submit-btn">Envoyer</button>
-            </form>
+              <h1 style="margin-bottom: 10px;">Contact</h1>
+    <form action="#">
+      <input placeholder="Name" type="text" required />
+      <input placeholder="Email" type="email" required />
+      <input placeholder="Subject" type="text" required />
+      <input placeholder="Message"/>
+      <button class="formBtn" type="submit">Submit</button>
+    </form>
+  </div>
+  <script src="/js/main.js"></script>
+</body>
         </div>
     </section>
+<script>
+    $(function() {
+  $('#contact').click(function() {
+    $('#contactForm').fadeToggle();
+  })
+  $(document).mouseup(function (e) {
+    var container = $("#contactForm");
 
+    if (!container.is(e.target)
+        && container.has(e.target).length === 0)
+    {
+        container.fadeOut();
+    }
+  });
+});
+
+</script>
  <footer>
     
     <p>Suivez-moi sur les réseaux sociaux :</p>
